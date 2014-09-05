@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+                        http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
+
+    <document name="FDevs\StaticPageBundle\Model\StaticPage" collection="static_page">
+
+        <field fieldName="id" id="true"/>
+
+        <field fieldName="type" name="type" type="string" />
+
+        <field fieldName="publishable" name="publish" type="boolean" />
+
+        <field fieldName="allowComments" type="boolean"/>
+
+        <reference-many target-document="FDevs\RoutingBundle\Doctrine\Mongodb\Route" field="routes" simple="true" mapped-by="content"/>
+        <reference-many target-document="FDevs\MenuBundle\Model\Menu" field="menuList" simple="true" mapped-by="content"/>
+
+    </document>
+
+</doctrine-mongo-mapping>

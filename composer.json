@@ -1,0 +1,28 @@
+{
+    "name": "fdevs/static-page-bundle",
+    "type": "symfony-bundle",
+    "description": "4devs StaticPageBundle",
+    "keywords": ["Static Page management"],
+    "homepage": "https://github.com/4devs/StaticPageBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Samusev",
+            "email": "andrey_simfi@list.ru",
+            "homepage":"http://andrey.4devs.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4",
+        "fdevs/menu-bundle": "~1.0",
+        "fdevs/routing-bundle": "~1.0",
+        "fdevs/page-bundle": "~1.0"
+    },
+    "require-dev": {},
+    "suggest": {},
+    "autoload": {
+        "psr-0": { "FDevs\\StaticPageBundle": "" }
+    },
+    "target-dir": "FDevs/StaticPageBundle"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="f_devs_static_page.sonata.admin.static.class">FDevs\StaticPageBundle\Sonata\Admin\StaticPageAdmin</parameter>
+    </parameters>
+
+    <services>
+        <service id="f_devs_static_page.sonata.admin.static" class="%f_devs_static_page.sonata.admin.static.class%">
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="label.сontent" label="label.static_page" label_translator_strategy="sonata.admin.label.strategy.underscore"/>
+            <argument/>
+            <argument>%f_devs_static_page.model.static_page.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <call method="setTranslationDomain">
+                <argument>FDevsStaticPageBundle</argument>
+            </call>
+            <call method="setAllowedTypes"><argument>%f_devs_static_page.allowed_types%</argument></call>
+        </service>
+    </services>
+</container>

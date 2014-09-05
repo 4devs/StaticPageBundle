@@ -1,0 +1,14 @@
+label:
+    static_page: 'Static'
+
+list:
+    label_id: 'Id'
+    label_type: 'Type'
+    label_title: 'Title'
+    label_routes: 'Routes'
+
+form:
+    label_type: 'Type'
+
+breadcrumb:
+    link_static_page_list: 'List Static Page'

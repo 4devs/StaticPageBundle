@@ -1,0 +1,15 @@
+label:
+    static_page: 'Статические'
+
+list:
+    label_id: 'Id'
+    label_type: 'Тип'
+    label_title: 'Заголовок'
+    label_routes: 'Маршруты'
+
+form:
+    label_type: 'Тип'
+
+breadcrumb:
+    link_static_page_list: 'Список статических страниц'
+

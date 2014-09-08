@@ -10,9 +10,6 @@
     </parameters>
 
     <services>
-        <service id="f_devs_contact_us.form.type.contact" class="%f_devs_contact_us.form.type.contact.class%">
-        </service>
-
         <service id="f_devs_static_page.form.type.type" class="%f_devs_static_page.form.type.page_type.class%">
             <tag name="form.type" alias="fdevs_static_type"/>
             <call method="setChoices"><argument>%f_devs_static_page.pages%</argument></call>

@@ -27,16 +27,6 @@ class StaticPageAdmin extends Admin
     }
 
     /**
-     * {@inheritdoc}
-     */
-    protected function configureListFields(ListMapper $list)
-    {
-        $list
-            ->addIdentifier('id')
-            ->add('type');
-    }
-
-    /**
      * {@inheritDoc}
      */
     public function prePersist($object)

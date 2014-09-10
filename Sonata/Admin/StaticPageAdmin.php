@@ -17,13 +17,18 @@ class StaticPageAdmin extends Admin
     /** @var array */
     private $allowedTypes = [];
 
+    /** @var string */
+    protected $baseRoutePattern = 'static-page';
+
     /**
      * {@inheritdoc}
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('type', 'fdevs_static_type');;
+            ->with('form.label_type', ['translation_domain' => 'FDevsStaticPageBundle'])
+                ->add('type', 'fdevs_static_type', ['label' => false])
+            ->end();
     }
 
     /**
@@ -57,7 +62,6 @@ class StaticPageAdmin extends Admin
                 $data = array_diff_key($default, array_flip($this->allowedTypes));
                 $data[$value[0]] = $value[1];
                 $route->setDefaults($data);
-
             }
         }
     }

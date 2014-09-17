@@ -9,7 +9,7 @@
         {
             "name": "Andrey Samusev",
             "email": "andrey_simfi@list.ru",
-            "homepage":"http://andrey.4devs.io"
+            "homepage": "http://andrey.4devs.io"
         }
     ],
     "minimum-stability": "dev",
@@ -17,12 +17,13 @@
         "php": ">=5.4",
         "fdevs/menu-bundle": "~1.0",
         "fdevs/routing-bundle": "~1.0",
-        "fdevs/page-bundle": "~1.1"
+        "fdevs/page-bundle": "~1.1",
+        "symfony-cmf/core-bundle": "~1.1"
     },
     "require-dev": {},
     "suggest": {},
     "autoload": {
-        "psr-0": { "FDevs\\StaticPageBundle": "" }
+        "psr-0": {"FDevs\\StaticPageBundle": ""}
     },
     "target-dir": "FDevs/StaticPageBundle"
 }

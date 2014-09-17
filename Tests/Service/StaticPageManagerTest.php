@@ -11,4 +11,4 @@ class StaticPageManagerTest extends TestCase
     {
         $this->assertInstanceOf('\FDevs\PageBundle\Service\PageManager', new StaticPageManager(''));
     }
-} 
+}

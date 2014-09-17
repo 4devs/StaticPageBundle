@@ -10,10 +10,6 @@
 
         <field fieldName="type" name="type" type="string" />
 
-        <field fieldName="publishable" name="publish" type="boolean" />
-
-        <field fieldName="allowComments" type="boolean"/>
-
         <reference-many target-document="FDevs\RoutingBundle\Doctrine\Mongodb\Route" field="routes" simple="true" mapped-by="content"/>
         <reference-many target-document="FDevs\MenuBundle\Model\Menu" field="menuList" simple="true" mapped-by="content"/>
 

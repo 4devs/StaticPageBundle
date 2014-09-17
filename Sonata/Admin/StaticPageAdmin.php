@@ -4,7 +4,6 @@ namespace FDevs\StaticPageBundle\Sonata\Admin;
 
 use FDevs\RoutingBundle\Model\ParentRoutingInterface;
 use Sonata\AdminBundle\Admin\Admin;
-use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
 class StaticPageAdmin extends Admin
@@ -20,6 +19,9 @@ class StaticPageAdmin extends Admin
     /** @var string */
     protected $baseRoutePattern = 'static-page';
 
+    /** @var string */
+    private $formType = 'fdevs_static_type';
+
     /**
      * {@inheritdoc}
      */
@@ -27,8 +29,22 @@ class StaticPageAdmin extends Admin
     {
         $formMapper
             ->with('form.label_type', ['translation_domain' => 'FDevsStaticPageBundle'])
-                ->add('type', 'fdevs_static_type', ['label' => false])
+                ->add('type', $this->formType, ['label' => false])
             ->end();
+    }
+
+    /**
+     * set Form Type
+     *
+     * @param string $formType
+     *
+     * @return self
+     */
+    public function setFormType($formType)
+    {
+        $this->formType = $formType;
+
+        return $this;
     }
 
     /**

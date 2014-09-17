@@ -17,7 +17,7 @@
         "php": ">=5.4",
         "fdevs/menu-bundle": "~1.0",
         "fdevs/routing-bundle": "~1.0",
-        "fdevs/page-bundle": "~1.0"
+        "fdevs/page-bundle": "~1.1"
     },
     "require-dev": {},
     "suggest": {},

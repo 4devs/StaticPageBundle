@@ -12,12 +12,13 @@
         <service id="f_devs_static_page.sonata.admin.static" class="%f_devs_static_page.sonata.admin.static.class%">
             <tag name="sonata.admin" manager_type="doctrine_mongodb" group="label.сontent" label="label.static_page" label_translator_strategy="sonata.admin.label.strategy.underscore"/>
             <argument/>
-            <argument>%f_devs_static_page.model.static_page.class%</argument>
+            <argument>%f_devs_static_page.model_class%</argument>
             <argument>SonataAdminBundle:CRUD</argument>
             <call method="setTranslationDomain">
                 <argument>FDevsStaticPageBundle</argument>
             </call>
             <call method="setAllowedTypes"><argument>%f_devs_static_page.allowed_types%</argument></call>
+            <call method="setFormType"><argument>%f_devs_static_page.form_type.type%</argument></call>
         </service>
     </services>
 </container>

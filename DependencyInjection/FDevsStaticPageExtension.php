@@ -24,11 +24,13 @@ class FDevsStaticPageExtension extends Extension
 
         $container->setParameter($this->getAlias() . '.pages', $config['pages']);
         $container->setParameter($this->getAlias() . '.allowed_types', ['_template', '_controller']);
+        $container->setParameter($this->getAlias() . '.manager_name', $config['manager_name']);
+        $container->setParameter($this->getAlias() . '.form_type.type', $config['form']['type']);
+        $container->setParameter($this->getAlias() . '.form_type.class', $config['form']['class']);
+        $container->setParameter($this->getAlias() . '.model_class', $config['model_class']);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
-
-        $container->setParameter($this->getAlias() . '.manager_name', $config['manager_name']);
 
         if ($config['db_driver']) {
             $loader->load(sprintf('%s.xml', $config['db_driver']));

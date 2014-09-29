@@ -18,6 +18,7 @@
 
         <service id="f_devs_static_page.static_page_manager" class="%f_devs_static_page.service.static_page_manager.class%" parent="f_devs_page.service.page_manager">
             <argument>%f_devs_static_page.model_class%</argument>
+            <call method="setTypes"><argument>%f_devs_static_page.pages%</argument></call>
         </service>
     </services>
 

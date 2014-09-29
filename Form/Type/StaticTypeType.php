@@ -2,6 +2,7 @@
 
 namespace FDevs\StaticPageBundle\Form\Type;
 
+use FDevs\StaticPageBundle\Service\StaticPageManager;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
@@ -23,14 +24,7 @@ class StaticTypeType extends AbstractType
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $choices = array_flip(array_map(
-            function ($val) {
-                return implode('|', $val);
-            },
-            $this->choices
-        ));
-
-        $resolver->setDefaults(['choices' => $choices]);
+        $resolver->setDefaults(['choices' => StaticPageManager::prepareChoices($this->choices)]);
     }
 
     /**
